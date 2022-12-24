@@ -17,8 +17,9 @@ null_ls.setup {
       extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" },
     },
     formatting.black.with { extra_args = { "--fast" } },
+    formatting.isort.with { extra_args = { "--profile=black" } },
     formatting.stylua,
     formatting.google_java_format,
-    diagnostics.flake8,
+    diagnostics.flake8.with {extra_args = { "--max-line-length=88"}},
   },
 }
