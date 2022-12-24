@@ -80,4 +80,8 @@ keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- Lsp
-keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+keymap("n", "<leader>fm", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
+
+-- Line move
+keymap("v", "<S-j>", ":m '>+1<cr>gv=gv") -- move line(s) up
+keymap("v", "<S-k>", ":m '<-2<cr>gv=gv") -- move line(s) down
